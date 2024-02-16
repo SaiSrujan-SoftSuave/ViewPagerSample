@@ -1,12 +1,9 @@
 package com.example.viewpagerandnavcon.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.viewpagerandnavcon.R
 import com.example.viewpagerandnavcon.databinding.ItemViewPagerBinding
 
 class ViewPagerAdaptor(private val images:List<Int>):RecyclerView.Adapter<ViewPagerAdaptor.ViewPagerViewHolder>() {
