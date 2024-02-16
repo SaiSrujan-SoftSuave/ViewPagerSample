@@ -7,6 +7,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.viewpagerandnavcon.R
 import com.example.viewpagerandnavcon.adapters.ViewPagerAdaptor
 import com.example.viewpagerandnavcon.databinding.ActivityMainBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -22,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         )
         val adapter = ViewPagerAdaptor(images)
         binding.viewPager.adapter = adapter
-
+        TabLayoutMediator(binding.tabItem,binding.viewPager){ tab, position ->
+            tab.setIcon(R.mipmap.ic_launcher_round)
+        }.attach()
     }
+
 }
