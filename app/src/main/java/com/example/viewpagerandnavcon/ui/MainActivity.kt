@@ -2,11 +2,13 @@ package com.example.viewpagerandnavcon.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.viewpagerandnavcon.R
 import com.example.viewpagerandnavcon.adapters.ViewPagerAdaptor
 import com.example.viewpagerandnavcon.databinding.ActivityMainBinding
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager.adapter = adapter
         TabLayoutMediator(binding.tabItem,binding.viewPager){ tab, position ->
             tab.setIcon(R.mipmap.ic_launcher_round)
+
         }.attach()
     }
 
